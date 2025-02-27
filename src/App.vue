@@ -9,7 +9,7 @@
     <!-- Contenu principal -->
     <main class="flex-grow p-8 flex flex-col items-center">
       
-      <h1 class="text-3xl font-bold text-red-500">Si ceci est rouge, Tailwind fonctionne !</h1>
+      <h1 class="text-3xl font-bold text-white">SpaceX : L'espace, en direct</h1>
 
      <!-- Conteneur pour les trois encadrés -->
 <div class="flex flex-col items-center space-y-16 py-10 w-full max-w-3xl">

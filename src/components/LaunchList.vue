@@ -3,18 +3,18 @@
     <h2 class="text-3xl font-bold mb-4">🚀 Liste des lancements</h2>
 
     <!-- Menu déroulant pour filtrer -->
-    <select v-model="filterStatus" class="mb-4 p-2 border border-white bg-transparent text-white rounded">
+    <select v-model="filterStatus" class="mb-4 p-2 border text-black rounded-lg text-lg">
       <option value="all">Tous les lancements</option>
       <option value="success">Lancements réussis</option>
       <option value="failed">Lancements échoués</option>
     </select>
 
     <!-- Liste des lancements avec scroll -->
-    <ul class="scrollable-list overflow-y-auto max-h-80 list-none pl-6">
+    <ul class="scrollable-list overflow-y-auto max-h-80 list-none pl-6 mb-4">
       <li
         v-for="launch in visibleLaunches"
         :key="launch.id"
-        class="mb-2 p-2 border border-white rounded cursor-pointer hover:bg-white/20 flex items-center text-lg"
+        class="mb-2 p-2 border rounded-lg cursor-pointer hover:bg-gray-100 flex items-center text-lg" 
         @click="openModal(launch)"
       >
         <span class="mr-2">🚀</span>
