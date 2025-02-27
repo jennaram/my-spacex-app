@@ -1,7 +1,7 @@
 <template>
     <footer class="py-4 text-white text-center">
       <div class="container mx-auto">
-        <p class="mb-2">© 2025 Tous droits réservés | <a href="https://www.linkedin.com/in/votreprofil" target="_blank" class="text-white hover:underline">Contact</a></p>
+        <p class="mb-2">© 2025 Tous droits réservés | <a href="https://www.linkedin.com/in/jennabenufferamia/" target="_blank" class="text-white hover:underline">Contact</a></p>
         
       </div>
     </footer>

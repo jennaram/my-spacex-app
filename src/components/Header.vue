@@ -2,7 +2,7 @@
     <header class="bg-[#778da9] py-4 w-full">
       <div class="container mx-auto flex items-center">
         <!-- Logo plus petit à gauche -->
-        <img src="/logo_3.png" alt="Logo" class="h-6 w-auto" />
+        <img src="/logo_3.png" alt="Logo" class="h-8 w-auto" />
       </div>
       
     </header>

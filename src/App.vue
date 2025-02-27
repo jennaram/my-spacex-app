@@ -6,7 +6,11 @@
     <!-- Contenu principal -->
     <main class="flex-grow p-8">
       
+      <div class="bg-blue-500 text-white text-3xl p-4">
+    🚀 Test Tailwind : Fond bleu et texte blanc
+    <p class="text-green-500 font-bold text-2xl">Texte vert avec Tailwind</p>
 
+</div>
       <!-- Conteneur pour les trois encadrés -->
       <div class="flex flex-col items-center space-y-16 py-10">
   <!-- ENCADRÉ POUR COUNTDOWN -->
