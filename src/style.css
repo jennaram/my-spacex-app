@@ -1,13 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Étendre le body sur toute la fenêtre avec l'image de fond */
 html, body, #app {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 /* Appliquer l'image de fond uniquement à la fenêtre */
@@ -15,20 +12,23 @@ body {
   background-image: url('/nasa_background.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 16px; /* Ajouter un padding pour éviter que le contenu ne touche les bords */
 }
 
 /* FORCER L'ENCADRÉ SUR LE CONTENU */
 .encadre {
-  background-color: rgba(255, 255, 255, 0.315); /* Augmenter la transparence */
+  background-color: rgba(255, 255, 255, 0.2); /* Augmenter la transparence */
   border-radius: 16px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   padding: 24px;
   max-width: 800px;
-  width: 100%; 
+  width: 100%;
+  margin-left: auto; /* Centrer horizontalement */
+  margin-right: auto; /* Centrer horizontalement */
 }
 
 /* Style pour scroller la liste */
@@ -54,22 +54,64 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
-}
+} */
 a:hover {
   color: #535bf2;
 }
 
-h1 {
+/* h1 {
   font-size: 3.2em;
   line-height: 1.1;
-}
+} */
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1
+  padding: 0.6em 1em; /* Correction : ajout de l'unité "em" pour le padding */
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #778da9;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+ul {
+  list-style-type: none; /* Supprime les puces */
+  padding-left: 1.5rem; /* Ajoute un padding à gauche pour compenser */
+}
+
+/* Classes utilitaires pour les marges */
+.mb-6 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mt-6 {
+  margin-top: 1.5rem !important;
+}
+
+img {
+  max-height: 200px !important;
+  width: auto !important;
+}
+
+.space-y-16 {
+  margin-bottom: 4rem !important;
+}
+
+.linkedin-icon {
+  width: 18px !important;
+  height: 18px !important;
+}
+
