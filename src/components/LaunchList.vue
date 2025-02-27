@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-white bg-opacity-50 rounded-2xl shadow-lg p-8 max-w-4xl w-full">
-    <h2 class="text-6xl font-bold mb-4">Liste des lancements</h2>
+  <div class="bg-black/40 text-white text-center p-6 rounded-lg shadow-lg max-w-4xl w-full">
+    <h2 class="text-3xl font-bold mb-4">🚀 Liste des lancements</h2>
 
     <!-- Menu déroulant pour filtrer -->
-    <select v-model="filterStatus" class="mb-4 p-2 border rounded">
+    <select v-model="filterStatus" class="mb-4 p-2 border border-white bg-transparent text-white rounded">
       <option value="all">Tous les lancements</option>
       <option value="success">Lancements réussis</option>
       <option value="failed">Lancements échoués</option>
@@ -14,13 +14,12 @@
       <li
         v-for="launch in visibleLaunches"
         :key="launch.id"
-        class="mb-2 p-2 border rounded cursor-pointer hover:bg-gray-100 flex items-center text-lg"
+        class="mb-2 p-2 border border-white rounded cursor-pointer hover:bg-white/20 flex items-center text-lg"
         @click="openModal(launch)"
       >
-      
-  <span class="mr-2">🚀</span>
-  {{ launch.name }} - {{ new Date(launch.date_utc).toLocaleDateString() }}
-</li>
+        <span class="mr-2">🚀</span>
+        {{ launch.name }} - {{ new Date(launch.date_utc).toLocaleDateString() }}
+      </li>
     </ul>
 
     <!-- Modal pour afficher les détails -->

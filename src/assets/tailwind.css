@@ -1,10 +1,29 @@
-/* src/assets/tailwind.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    .custom-button {
-      @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
-    }
+@layer base {
+  /* Mets ici les styles globaux qui étaient dans style.css */
+  body {
+    background-image: url('/nasa_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
   }
+
+  .encadre {
+    @apply bg-white/20 backdrop-blur-lg rounded-xl shadow-md p-6 w-full max-w-2xl;
+    /* background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    max-width: 800px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; */
+  }
+}

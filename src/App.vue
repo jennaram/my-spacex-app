@@ -1,33 +1,53 @@
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div 
+    class="min-h-screen flex flex-col bg-cover bg-center bg-no-repeat font-sans"
+    style="background-image: url('/nasa_background.jpg')"
+  >
     <!-- Header -->
     <Header />
 
     <!-- Contenu principal -->
-    <main class="flex-grow p-8">
+    <main class="flex-grow p-8 flex flex-col items-center">
       
-      <div class="bg-blue-500 text-white text-3xl p-4">
-    🚀 Test Tailwind : Fond bleu et texte blanc
-    <p class="text-green-500 font-bold text-2xl">Texte vert avec Tailwind</p>
+      <h1 class="text-3xl font-bold text-red-500">Si ceci est rouge, Tailwind fonctionne !</h1>
 
-</div>
-      <!-- Conteneur pour les trois encadrés -->
-      <div class="flex flex-col items-center space-y-16 py-10">
+     <!-- Conteneur pour les trois encadrés -->
+<div class="flex flex-col items-center space-y-16 py-10 w-full max-w-3xl">
+  
   <!-- ENCADRÉ POUR COUNTDOWN -->
-  <div class="encadre bg-opacity-20 flex-1 mb-6">
+  <div class="encadre text-white text-center font-mono text-xl">
     <Countdown />
-  </div>
+    
+    <!-- Vidéo YouTube -->
+    <div class="flex justify-center w-full mt-4">
+      <div class="w-full max-w-xl">
+        <iframe 
+          width="100%" 
+          height="315" 
+          src="https://www.youtube.com/embed/28e2RCslkN4?si=ldOzUKqUf__To5OX" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen 
+          class="rounded-lg shadow-lg"
+        ></iframe>
+      </div>
+    </div>
+  </div> <!-- Fin de div.encadre -->
 
   <!-- ENCADRÉ POUR LA LISTE DES LANCEMENTS -->
-  <div class="encadre bg-opacity-20 flex-1 mb-6">
+  <div class="encadre">
     <LaunchList @select-launch="selectedLaunch = $event" />
   </div>
 
   <!-- ENCADRÉ POUR LES DÉTAILS DU LANCEMENT -->
-  <div class="encadre bg-opacity-20 flex-1 mb-6" v-if="selectedLaunch">
+  <div class="encadre" v-if="selectedLaunch">
     <LaunchDetails :launch="selectedLaunch" @close="selectedLaunch = null" />
   </div>
-</div>
+
+</div> <!-- Fin du conteneur principal -->
+
     </main>
 
     <!-- Footer -->
@@ -46,3 +66,13 @@ import LaunchDetails from './components/LaunchDetails.vue';
 // État pour stocker le lancement sélectionné
 const selectedLaunch = ref(null);
 </script>
+
+<style>
+/* Importation des polices Google */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@200..800&family=Raleway:wght@100..900&display=swap');
+
+/* Ajout des polices globales */
+body {
+  font-family: 'Raleway', sans-serif;
+}
+</style>
