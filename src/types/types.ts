@@ -1,5 +1,5 @@
 // Définir l'interface Launch
-interface Launch {
+export interface Launch {
     id: string;
     name: string;
     date_utc: string;
