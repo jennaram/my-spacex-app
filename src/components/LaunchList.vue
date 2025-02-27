@@ -34,9 +34,10 @@
   import { ref, computed, onMounted } from 'vue';
   import axios from 'axios';
   import LaunchDetails from './LaunchDetails.vue';
+  import type { Launch } from '../types/types'; // Importer l'interface
   
   // État des lancements
-  const launches = ref([]);
+  const launches = ref<Launch[]>([]);
   
   // État du filtre
   const filterStatus = ref('all');
